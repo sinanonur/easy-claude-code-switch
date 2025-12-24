@@ -1,0 +1,11 @@
+#!/bin/bash
+source ~/.aliases # or Where you include your API keys into environment. Or you can directly enter API key
+
+#export ANTHROPIC_BASE_URL="https://api.z.ai/api/coding/paas" # Old endpoint
+export ANTHROPIC_BASE_URL="https://api.z.ai/api/anthropic"
+export ANTHROPIC_AUTH_TOKEN=$ZAI_API_KEY
+unset ANTHROPIC_API_KEY
+export ANTHROPIC_MODEL="glm-4.7"
+export ANTHROPIC_SMALL_FAST_MODEL="glm-4.7"
+
+claude "$@"

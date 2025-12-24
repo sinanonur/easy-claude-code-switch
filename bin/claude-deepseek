@@ -1,0 +1,10 @@
+#!/bin/bash
+source ~/.aliases # or Where you include ypur API keys into environment. Or you can directly enter API key
+
+export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+export ANTHROPIC_AUTH_TOKEN=$DEEPSEEK_API_KEY
+unset ANTHROPIC_API_KEY
+export ANTHROPIC_MODEL="deepseek-chat"
+export ANTHROPIC_SMALL_FAST_MODEL="deepseek-chat"
+
+claude "$@"

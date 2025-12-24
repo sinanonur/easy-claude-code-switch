@@ -1,0 +1,20 @@
+#!/bin/bash
+source ~/.aliases # or Where you include your API keys into environment. Or you can directly enter API key
+
+export ANTHROPIC_BASE_URL="https://api.minimax.io/anthropic"
+
+# Use the API key variable
+export ANTHROPIC_AUTH_TOKEN=$MINIMAX_API_KEY
+unset ANTHROPIC_API_KEY
+
+# Set the other variables you provided
+export API_TIMEOUT_MS="3000000"
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+export ANTHROPIC_MODEL="MiniMax-M2"
+export ANTHROPIC_SMALL_FAST_MODEL="MiniMax-M2"
+export ANTHROPIC_DEFAULT_SONNET_MODEL="MiniMax-M2"
+export ANTHROPIC_DEFAULT_OPUS_MODEL="MiniMax-M2"
+export ANTHROPIC_DEFAULT_HAIKU_MODEL="MiniMax-M2"
+
+# Run the claude command with all provided arguments
+claude "$@"
